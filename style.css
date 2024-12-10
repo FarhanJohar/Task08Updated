@@ -1,0 +1,194 @@
+* { 
+    margin: 0;
+    padding: 0;
+    font-family: 'sans-serif';
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+  }
+  
+  .todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+  }
+  
+  .todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+  }
+  
+  .field {
+    margin-bottom: 20px;
+  }
+  
+  .field h3 {
+    color: #002765;
+    margin-bottom: 8px;
+    font-size: 18px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 20px;
+    background-color: aquamarine;
+  }
+  
+  textarea {
+    height: 100px;
+    resize: none;
+
+  }
+  #image-box {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 20px;
+    background-color: aquamarine;
+}
+
+/* Style for the image displayed in the table */
+.task-image {
+    width: 50px; /* Set a max size */
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+#preview-image {
+  display: block;
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 15px;  /* Rounded corners */
+  border: 2px solid #ff5945; /* Border color */
+  padding: 2px; /* Space between the image and border */
+  box-shadow: 0 4px 6px #b3b3b3; /* Soft shadow with hex color */
+}
+ 
+  button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    margin-right: 10px;
+  }
+  
+  ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer; 
+    position: relative;
+  }
+  
+  ul li::after {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 29px;
+    border-radius: 50%;
+    background-image: url(https://i.postimg.cc/9M7S6smc/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+  }
+  
+  ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+  }
+  
+  ul li.checked::after {
+    background-image: url(https://i.postimg.cc/0ykTztfC/checked.png);
+  }
+  
+  ul li span {
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+  }
+  
+  ul li span:hover {
+    background: #edeef0;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  #task-table-container {
+    display: none; /* Initially hide the task table */
+  }
+  
+  #task-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+  }
+  
+  #task-table th, #task-table td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  #task-table th {
+    background-color: #f4f4f4;
+  }
+  
+  button {
+    background-color: #ff5945;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #e04e3b;
+  }
+  h3{
+    color: #fff;
+  }
+  .required {
+    color: rgb(199, 50, 50);
+    font-weight: bold;
+}
+.warning-message {
+  font-size: 14px;
+  color: rgb(255, 48, 48);
+  margin-top: 5px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+        <div class="todo-app">
+            <h2>To-Do List <img src="https://i.postimg.cc/HW5DR8nb/icon.png"></h2>
+
+ <!-- Title Field -->
+<div class="field">
+  <h3>Title <span class="required">*</span></h3>
+  <input type="text" id="title-box" placeholder="Enter Task Title" required>
+  <p id="title-warning" class="warning-message" style="display: none; color: rgb(255, 28, 28),"font-family: sans-serif;>Add a title</p> <!-- Title warning -->
+</div>
+
+<!-- Description Field -->
+<div class="field">
+  <h3>Description <span class="required">*</span></h3>
+  <textarea id="description-box" placeholder="Enter Task Description" required></textarea>
+  <p id="description-warning" class="warning-message" style="display: none; color: rgb(255, 28, 28),"font-family: sans-serif;>Add a description</p> <!-- Description warning -->
+</div>
+
+<!-- Image Field -->
+<div class="field">
+  <h3>Image <span class="required">*</span></h3>
+  <input type="file" id="image-box" accept="image/*" required>
+  <img id="preview-image" src="" alt="Image Preview" style="display: none; margin-top: 10px; max-width: 100px;">
+  <p id="image-warning" class="warning-message" style="display: none; color: rgb(255, 28, 28)"font-family: sans-serif;>Please upload an image</p> <!-- Image warning -->
+</div>
+            <!-- Buttons -->
+            <div class="buttons">
+                <button onclick="addtask()">Add Task</button>
+                <button onclick="clearFields()">Clear</button>
+            </div>
+
+            <!-- Task List -->
+            <ul id="list-container">
+                <!-- Tasks will appear here -->
+            </ul>
+        </div>
+        <div class="task-table" id="task-table-container" style="display: none;">
+          <h3>Task Table</h3>
+          <table id="task-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Images</th>
+                <th>Description</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Tasks will appear here -->
+            </tbody>
+          </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
